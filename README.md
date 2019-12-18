@@ -15,8 +15,8 @@ Due to API sets in various operating system (Windows 7 and above), a DLL whose n
 - 32 bit processes on x64 PC (while x64 ntdll.dll exists in the memory space)
 - Loading a DLL to self process' own memory doesn't work with WinSxS file because a different path for the DLL is given. Remember that two DLL's with the same name can appear in the same process so can't use the filename only for lookup.
 - Nice GUI
-- Maybe also check for EAT hooking? Might require writing a EAT hooking program since 
-- Maybe do an inline hooking detector
+- Maybe also check for EAT hooking? Might require writing a EAT hooking program since there's only 2 I've seen looking up "EAT hook github", that might not work on 64 bit, idk. This hooking only allows to intercept calls to GetProcAddress anyways.
+- Maybe do an inline hooking detector (through checksum? Might require a disassembly module for that)
 
 # Useful References
 
