@@ -11,6 +11,6 @@ Comparing the API's address in memory against the API address exported by the DL
 
 TODO:
 - 32 bit processes on x64 PC (while x64 ntdll.dll exists in the memory space)
-- Loading a DLL to self process' own memory doesn't work with WinSxS file because a different path for the DLL is given
+- Loading a DLL to self process' own memory doesn't work with WinSxS file because a different path for the DLL is given. Remember that two DLL's with the same name can appear in the same process so can't use the filename only for lookup.
 - Nice GUI
 - Maybe also check for EAT hooking? Might require writing a EAT hooking program since 
